@@ -45,8 +45,10 @@ export default function LegalNameScreen() {
         >
           <View style={styles.subContainer}>
             <StatusBar barStyle="default" />
-            <Text style={globalStyles.title}>Your Legal Name</Text>
-            <Text style={globalStyles.description}>
+            <Text style={[globalStyles.title, styles.title]}>
+              Your Legal Name
+            </Text>
+            <Text style={[globalStyles.description, styles.description]}>
               We need to know a bit about you so that we can create your
               account.
             </Text>
@@ -90,5 +92,11 @@ const styles = StyleSheet.create({
     right: responsiveWidth(2),
     width: responsiveHeight(7),
     height: responsiveHeight(7),
+  },
+  description: {
+    marginBottom: responsiveHeight(3),
+  },
+  title: {
+    marginBottom: responsiveHeight(2),
   },
 });

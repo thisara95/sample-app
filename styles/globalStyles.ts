@@ -26,7 +26,6 @@ export const globalStyles = StyleSheet.create({
     lineHeight: responsiveHeight(5),
     color: COLORS.title,
     textAlign: "left",
-    marginBottom: responsiveHeight(2),
     fontFamily: "Roboto",
   },
   description: {
@@ -35,7 +34,6 @@ export const globalStyles = StyleSheet.create({
     lineHeight: responsiveHeight(2.5),
     color: COLORS.description,
     textAlign: "left",
-    marginBottom: responsiveHeight(3),
     fontFamily: "Roboto",
   },
   input: {
