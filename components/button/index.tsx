@@ -28,9 +28,17 @@ const CustomButton: React.FC<CustomButtonProps> = ({
       ]}
       onPress={onPress}
       disabled={disabled}
+      testID="button"
     >
       {label && <Text style={styles.text}>{label}</Text>}
-      {icon && <Ionicons name={icon} size={24} color={COLORS.white} />}
+      {icon && (
+        <Ionicons
+          testID="button-icon"
+          name={icon}
+          size={24}
+          color={COLORS.white}
+        />
+      )}
     </TouchableOpacity>
   );
 };

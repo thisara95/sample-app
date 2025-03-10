@@ -90,6 +90,7 @@ export default function DashboardScreen() {
           size="large"
           color="#4A90E2"
           style={{ marginTop: 20 }}
+          testID="loading-indicator"
         />
       </View>
     );
