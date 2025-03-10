@@ -17,7 +17,7 @@ export const globalStyles = StyleSheet.create({
   },
   containerWhite: {
     flex: 1,
-    padding: responsiveWidth(5),
+    padding: 10,
     backgroundColor: COLORS.white,
   },
   title: {

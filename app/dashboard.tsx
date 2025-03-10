@@ -97,7 +97,7 @@ export default function DashboardScreen() {
 
   return (
     <SafeAreaView style={styles.safeAreaContainer}>
-      <StatusBar barStyle="light-content" />
+      <StatusBar barStyle={"light-content"} backgroundColor={COLORS.black} />
       <View style={styles.mainContainer}>
         <Text style={[globalStyles.title, styles.titleText]}>
           Hey, {firstName || "User"}!

@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
   },
   button: {
     position: "absolute",
-    bottom: responsiveHeight(2),
-    right: responsiveWidth(2),
+    bottom: 0,
+    right: 0,
     width: responsiveHeight(7),
     height: responsiveHeight(7),
   },

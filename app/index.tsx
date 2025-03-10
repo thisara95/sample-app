@@ -5,7 +5,6 @@ import {
   responsiveHeight,
   responsiveWidth,
 } from "react-native-responsive-dimensions";
-import { globalStyles } from "@/styles/globalStyles";
 import { COLORS } from "@/styles/colors";
 import BlotLogo from "../assets/images/logo.png";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -23,7 +22,7 @@ export default function SplashScreen() {
         if (!apiKey) {
           await SecureStore.setItemAsync(
             "API_KEY",
-            "crals9pr01qhk4bqotb0crals9pr01qhk4bqotbg"
+            process.env.EXPO_PUBLIC_API_KEY ?? ""
           );
         }
         setTimeout(() => {
@@ -57,7 +56,7 @@ const styles = StyleSheet.create({
   },
   logo: {
     marginBottom: responsiveHeight(5),
-    height: responsiveHeight(13),
-    width: responsiveWidth(50),
+    height: 75,
+    width: 135,
   },
 });

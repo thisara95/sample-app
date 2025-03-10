@@ -5,20 +5,24 @@ import { Alert, Linking, Platform } from "react-native";
 export const requestNotificationPermission = async (
   setNotifications: (enabled: boolean) => void
 ) => {
-  const { status } = await Notifications.requestPermissionsAsync();
-  if (status !== "granted") {
-    Alert.alert(
-      "Permission Denied",
-      "You need to enable notifications in settings.",
-      [
-        { text: "Cancel", style: "cancel" },
-        { text: "Go to Settings", onPress: openAppSettings },
-      ]
-    );
-    setNotifications(false);
-  } else {
-    setNotifications(true);
-    await AsyncStorage.setItem("notificationsEnabled", JSON.stringify(true));
+  try {
+    const { status } = await Notifications.requestPermissionsAsync();
+    if (status !== "granted") {
+      Alert.alert(
+        "Permission Denied",
+        "You need to enable notifications in settings.",
+        [
+          { text: "Cancel", style: "cancel" },
+          { text: "Go to Settings", onPress: openAppSettings },
+        ]
+      );
+      setNotifications(false);
+    } else {
+      setNotifications(true);
+      await AsyncStorage.setItem("notificationsEnabled", JSON.stringify(true));
+    }
+  } catch (error) {
+    console.error("Error requesting notification permissions: ", error);
   }
 };
 
