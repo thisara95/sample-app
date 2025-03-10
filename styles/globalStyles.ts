@@ -59,4 +59,10 @@ export const globalStyles = StyleSheet.create({
     color: COLORS.white,
     textAlign: "center",
   },
+  commonView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: COLORS.black,
+  },
 });
